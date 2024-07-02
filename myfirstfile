@@ -1,0 +1,20 @@
+# 新しいブランチを作成
+git branch feature-branch
+
+# 新しいブランチに切り替え
+git checkout feature-branch
+
+# ブランチ内での変更をコミット
+# (ここでは、新しいファイルを追加する例)
+echo "print('Hello, world!')" > hello.py
+git add hello.py
+git commit -m "Add hello world script"
+
+# メインブランチに戻る
+git checkout main
+
+# 新しいブランチをメインブランチに統合
+git merge feature-branch
+
+# 不要になったブランチを削除
+git branch -d feature-branch
